@@ -62,3 +62,30 @@ function calc() {
     prevStr = '';
     update();
 }
+
+function update() {
+    let displayValue = currentStr;
+    const currDisplay = document.getElementById('curr-val');
+
+    // --- Font Size Adjustment Logic ---
+    if (displayValue.length > 20) {
+        currDisplay.style.fontSize = "1.2rem"; // Sab se chota font
+    } else if (displayValue.length > 15) {
+        currDisplay.style.fontSize = "1.8rem"; // Darmiyana font
+    } else if (displayValue.length > 10) {
+        currDisplay.style.fontSize = "2.2rem"; // Thora chota
+    } else {
+        currDisplay.style.fontSize = "3rem";   // Default normal font
+    }
+
+    // --- Ellipsis Logic (25 characters limit) ---
+    if (displayValue.length > 25) {
+        displayValue = displayValue.substring(0, 25) + "...";
+    }
+
+    currDisplay.innerText = displayValue;
+    
+    // Previous Calculation Display
+    const prevDisplay = document.getElementById('prev-val');
+    prevDisplay.innerText = op ? `${prevStr} ${op}` : '';
+}
