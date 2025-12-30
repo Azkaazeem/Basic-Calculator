@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Calculator | Pro UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-midnight">
+
+    <div class="mesh-bg"></div>
+
+    <div class="main-wrapper">
+        
+        <header class="ui-header">
+            <h1 class="logo">NEO<span>CALC</span></h1>
+            <p class="tagline">Precision in every pixel</p>
+        </header>
+
+        <div class="calculator">
+            <div class="theme-selector">
+                <div class="dot dot-1" onclick="setTheme('midnight')"></div>
+                <div class="dot dot-2" onclick="setTheme('emerald')"></div>
+                <div class="dot dot-3" onclick="setTheme('nordic')"></div>
+                <div class="dot dot-4" onclick="setTheme('berry')"></div>
+            </div>
+
+            <div class="display">
+                <div id="prev-val" class="prev-val"></div>
+                <div id="curr-val" class="curr-val">0</div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="clearDisplay()" class="span-two special">AC</button>
+                <button onclick="deleteNum()" class="special">DEL</button>
+                <button onclick="setOp('/')" class="operator">÷</button>
+                
+                <button onclick="addNum('7')">7</button>
+                <button onclick="addNum('8')">8</button>
+                <button onclick="addNum('9')">9</button>
+                <button onclick="setOp('*')" class="operator">×</button>
+                
+                <button onclick="addNum('4')">4</button>
+                <button onclick="addNum('5')">5</button>
+                <button onclick="addNum('6')">6</button>
+                <button onclick="setOp('+')" class="operator">+</button>
+                
+                <button onclick="addNum('1')">1</button>
+                <button onclick="addNum('2')">2</button>
+                <button onclick="addNum('3')">3</button>
+                <button onclick="setOp('-')" class="operator">-</button>
+                
+                <button onclick="addNum('.')">.</button>
+                <button onclick="addNum('0')">0</button>
+                <button onclick="calc()" class="span-two equal">=</button>
+            </div>
+        </div>
+
+        <footer class="ui-footer">
+            <div class="footer-line"></div>
+            <p>&copy; 2025 Precision UI Design. Built for Performance.</p>
+        </footer >
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
